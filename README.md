@@ -31,3 +31,7 @@
   ```
   ./applemusic_to_es.py -i /myfolder/apple_music_play_activity.csv -e http://localhost:9200/applemusic-29.09.2018
   ```
+
+## Elasticsearch
+  After the `applemusic_to_es.py` script excecution you will be able to browse your AppleMusic play activity in Kibana. Should look like this:
+  ![AppleMusic Kibana](https://blog.cypressxt.net/wp-content/uploads/2018/10/AppleMusicKibana.jpg)
