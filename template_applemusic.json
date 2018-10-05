@@ -1,0 +1,189 @@
+{
+  "index_patterns": ["applemusic-*"],
+  "mappings":{
+    "applemusic": {
+      "properties": {
+        "Apple Id Number": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Apple Music Subscription": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Artist Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Build Version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Client IP Address": {
+          "type": "ip"
+        },
+        "Container Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Device Identifier": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "End Position In Milliseconds": {
+          "type": "long"
+        },
+        "End Reason Type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Event End Timestamp": {
+          "type": "date"
+        },
+        "Event Reason Hint Type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Event Received Timestamp": {
+          "type": "date"
+        },
+        "Event Start Timestamp": {
+          "type": "date"
+        },
+        "Event Type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Feature Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Item Type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Media Duration In Milliseconds": {
+          "type": "long"
+        },
+        "Media Type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Metrics Bucket Id": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Metrics Client Id": {
+          "type": "ip"
+        },
+        "Milliseconds Since Play": {
+          "type": "long"
+        },
+        "Offline": {
+          "type": "boolean"
+        },
+        "Play Duration Milliseconds": {
+          "type": "long"
+        },
+        "Song Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Source Type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Start Position In Milliseconds": {
+          "type": "long"
+        },
+        "Store Country Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "UTC Offset In Seconds": {
+          "type": "long"
+        }
+      }
+    }
+  }
+}
