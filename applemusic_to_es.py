@@ -2,7 +2,7 @@
 
 ### AppleMusic Activity GDPR file to Elasticsearch
 # Author: Clement 'CypressXt' Hampai
-# Github: https://github.com/CypressXt/AppleMusic-elastic
+# Github: https://github.com/CypressXt/AppleMusic-Elastic
 
 import argparse, csv, json, requests
 
