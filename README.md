@@ -37,3 +37,10 @@
 ## Elasticsearch
   After the `applemusic_to_es.py` script excecution you will be able to browse your AppleMusic play activity in Kibana. Should look like this:
   ![AppleMusic Kibana](https://blog.cypressxt.net/wp-content/uploads/2018/10/AppleMusicKibana.jpg)
+
+### Visualizations
+  Work in progress...
+  Available soon for download.
+### Dashboards
+  Work in progress...
+  Available soon for download.
