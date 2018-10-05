@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 ### AppleMusic Activity GDPR file to Elasticsearch
-# Author:   Clément 'CypressXt' Hampaï
-# Github:   https://github.com/CypressXt/AppleMusic-elastic
+# Author: Clement 'CypressXt' Hampai
+# Github: https://github.com/CypressXt/AppleMusic-elastic
 
 import argparse, csv, json, requests
 
@@ -27,8 +27,8 @@ def main(args):
         json_bulk = generate_json_bulk(csv_rows)
         print "Elasticsearch insertion..."
         post_bulk(elastic_index_url, json_bulk)
-     except Exception as e:
-        print 'An error occured '+str(e)
+    except Exception as e:
+         print 'An error occured '+str(e)
 #-------------------------------------------------------------------------------
 
 # Read the Apple Music Play Activity csv file ----------------------------------
