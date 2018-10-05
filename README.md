@@ -22,6 +22,8 @@
   You can find the useful file in the downloaded Zip file under `App Store, iTunes Store, iBooks Store, Apple Music/App_Store_iTunes_Store_iBooks_Store_Apple_Music/Apple Music Activity/Apple Music Play Activity.csv`
 
 ## Script usage
+  Get the Python script [applemusic_to_es.py](applemusic_to_es.py)
+
   Once you've the `Apple Music Play Activity.csv` file, use the `applemusic_to_es.py` script like this:
   ```
   ./applemusic_to_es.py [-h] -i CSV_INPUT_FILE -e ELASTIC_INDEX_URL
