@@ -12,7 +12,7 @@
             }
           }
         },
-        "Apple Music Subscription": {
+        "apple_music_subscription": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -21,7 +21,7 @@
             }
           }
         },
-        "Artist Name": {
+        "artist_name": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -30,7 +30,7 @@
             }
           }
         },
-        "Build Version": {
+        "build_version": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -39,10 +39,10 @@
             }
           }
         },
-        "Client IP Address": {
+        "client_ip_address": {
           "type": "ip"
         },
-        "Container Name": {
+        "container_name": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -51,7 +51,7 @@
             }
           }
         },
-        "Device Identifier": {
+        "device_identifier": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -60,10 +60,10 @@
             }
           }
         },
-        "End Position In Milliseconds": {
+        "end_position_in_milliseconds": {
           "type": "long"
         },
-        "End Reason Type": {
+        "end_reason_type": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -72,10 +72,10 @@
             }
           }
         },
-        "Event End Timestamp": {
+        "event_end_timestamp": {
           "type": "date"
         },
-        "Event Reason Hint Type": {
+        "event_reason_hint_type": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -84,13 +84,13 @@
             }
           }
         },
-        "Event Received Timestamp": {
+        "event_received_timestamp": {
           "type": "date"
         },
-        "Event Start Timestamp": {
+        "event_start_timestamp": {
           "type": "date"
         },
-        "Event Type": {
+        "event_type": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -99,7 +99,7 @@
             }
           }
         },
-        "Feature Name": {
+        "feature_name": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -108,7 +108,7 @@
             }
           }
         },
-        "Item Type": {
+        "item_type": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -117,10 +117,10 @@
             }
           }
         },
-        "Media Duration In Milliseconds": {
+        "media_duration_in_milliseconds": {
           "type": "long"
         },
-        "Media Type": {
+        "media_type": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -129,7 +129,7 @@
             }
           }
         },
-        "Metrics Bucket Id": {
+        "metrics_bucket_id": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -138,7 +138,7 @@
             }
           }
         },
-        "Metrics Client Id": {
+        "metrics_client_id": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -147,16 +147,16 @@
             }
           }
         },
-        "Milliseconds Since Play": {
+        "milliseconds_since_play": {
           "type": "long"
         },
         "Offline": {
           "type": "boolean"
         },
-        "Play Duration Milliseconds": {
+        "play_duration_milliseconds": {
           "type": "long"
         },
-        "Song Name": {
+        "song_name": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -165,7 +165,7 @@
             }
           }
         },
-        "Source Type": {
+        "source_type": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -174,10 +174,10 @@
             }
           }
         },
-        "Start Position In Milliseconds": {
+        "start_position_in_milliseconds": {
           "type": "long"
         },
-        "Store Country Name": {
+        "store_country_name": {
           "type": "text",
           "fields": {
             "keyword": {
@@ -186,7 +186,7 @@
             }
           }
         },
-        "UTC Offset In Seconds": {
+        "utc_offset_in_seconds": {
           "type": "long"
         }
       }

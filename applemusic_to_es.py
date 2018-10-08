@@ -42,7 +42,7 @@ def read_csv_file(file):
             for i in range(len(title)):
                 if row[title[i]] == "":
                     row[title[i]] = None
-            csv_rows.extend([{title[i]:row[title[i]] for i in range(len(title))}])
+            csv_rows.extend([{title[i].lower().replace(' ', '_'):row[title[i]] for i in range(len(title))}])
     return csv_rows
 #-------------------------------------------------------------------------------
 
