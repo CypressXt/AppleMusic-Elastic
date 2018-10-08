@@ -59,9 +59,36 @@ def generate_json_bulk(csv_rows):
 def post_bulk(elastic_index_url, json_bulk):
     elastic_index_url += "/applemusic/_bulk"
     headers = {'Content-type': 'application/json'}
-    bulk = requests.post(elastic_index_url, data=json_bulk, headers=headers)
-    print(bulk.status_code, bulk.reason)
-    print(bulk.text)
+    chuck_size = 5000
+    print " "+elastic_index_url
+    bulk_lines = json_bulk.split('\n')
+    index = 0
+    bulked = 0
+    bulk = ''
+    docs = len(bulk_lines)/2
+    for bulk_line in bulk_lines:
+        bulk += bulk_line+"\n"
+        if bulk_line != '{"index": {}}':
+            index +=1
+        if index == chuck_size:
+            bulked += chuck_size
+            print "insertion "+str(bulked)+"/"+str(docs)+" events..."
+            bulk_exec(elastic_index_url, bulk, headers)
+            bulk = ''
+            index = 0
+    if index < chuck_size and index > 0:
+        bulked += index
+        print "insertion "+str(bulked)+"/"+str(docs)+" events..."
+        bulk_exec(elastic_index_url, bulk, headers)
+#-------------------------------------------------------------------------------
+
+# Elasticsearch bulk exec ------------------------------------------------------
+def bulk_exec(elastic_index_url, bulk, headers):
+    bulk_query = requests.post(elastic_index_url, data=bulk, headers=headers)
+    if bulk_query.status_code != 200:
+        print(bulk_query.status_code, bulk_query.reason)
+        print bulk
+        print(bulk_query.text)
 #-------------------------------------------------------------------------------
 
 if __name__ == "__main__":
