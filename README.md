@@ -42,5 +42,6 @@
   Work in progress...
   Available soon for download.
 ### Dashboards
+  ![AppleMusic Dashboard](https://blog.cypressxt.net/wp-content/uploads/2018/10/appleMusic_dashboard.png)
   Work in progress...
   Available soon for download.
