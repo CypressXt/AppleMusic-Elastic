@@ -4,29 +4,106 @@
 # Author: Clement 'CypressXt' Hampai
 # Github: https://github.com/CypressXt/AppleMusic-Elastic
 
-import argparse, csv, json, requests
+import argparse, csv, json, requests, datetime
 
 
 # Args management --------------------------------------------------------------
 def handle_args():
     parser = argparse.ArgumentParser(description='AppleMusic GDPR export to Elasticsearch')
-    parser.add_argument('-i', '--csv-input-file', help='AppleMusic GDPR export file usually "Apple Music Play Activity.csv"',required=True)
-    parser.add_argument('-e', '--elastic-index-url', help='Elasticsearch index full url',required=True)
+    commands = parser.add_subparsers(title='sub-commands')
+    setup_parser = commands.add_parser('setup')
+    setup_parser.set_defaults(func=setup)
+    setup_parser.add_argument('-e', '--elastic-url', help='Elasticsearch server url',required=True)
+    setup_parser.add_argument('-k', '--kibana-url', help='Kibana server url',required=True)
+    inflate_parser = commands.add_parser('inflate')
+    inflate_parser.set_defaults(func=inflate)
+    inflate_parser.add_argument('-i', '--csv-input-file', help='AppleMusic GDPR export file usually "Apple Music Play Activity.csv"',required=True)
+    inflate_parser.add_argument('-e', '--elastic-url', help='Elasticsearch server url',required=True)
     args = parser.parse_args()
     return args
 #-------------------------------------------------------------------------------
 
-# Main -------------------------------------------------------------------------
-def main(args):
+# Setup ------------------------------------------------------------------------
+def setup(args):
+    elastic_url = args.elastic_url
+    kibana_url = args.kibana_url
+    try:
+        print "Elasticsearch & kibana Setup..."
+        print " Elasticsearch "+str(elastic_url)
+        print " Kibana "+str(elastic_url)
+        template = get_template()
+        template_result = set_template(elastic_url, template)
+        visualizations = get_visualizations()
+        push_visualizations(kibana_url, visualizations)
+    except Exception as e:
+        print str(e)
+#-------------------------------------------------------------------------------
+
+# Get Elasticsearch mapping from Github ----------------------------------------
+def get_template():
+    template_url = "https://raw.githubusercontent.com/CypressXt/AppleMusic-Elastic/master/template_applemusic.json"
+    call = requests.get(template_url)
+    template = ''
+    if call.status_code == 200:
+        template = call.json()
+    else:
+        raise Exception('Failed to get the template for Github')
+    print "     template downloaded from Github"
+    return template
+#-------------------------------------------------------------------------------
+
+# Set Elasticsearch template ----------------------------------------------------
+def set_template(elastic_url, template):
+    template_url = elastic_url+"/_template/applemusic"
+    headers = {'Content-type': 'application/json'}
+    call = requests.put(template_url, data=json.dumps(template), headers=headers)
+    result = False
+    if call.status_code == 200 and call.text == '{"acknowledged":true}':
+        result = True
+    else:
+        raise Exception('Failed to set the Elasticsearch template '+str(template_url)+"\n"+str(call.text))
+    print "         template applied"
+    return result
+#-------------------------------------------------------------------------------
+
+# Get Elasticsearch mapping from Github ----------------------------------------
+def get_visualizations():
+    visualizations = "https://raw.githubusercontent.com/CypressXt/AppleMusic-Elastic/master/kibana_dashboard_visualization.json"
+    call = requests.get(visualizations)
+    visualizations = ''
+    if call.status_code == 200:
+        visualizations = call.json()
+    else:
+        raise Exception('Failed to get visualizations for Github')
+    print "     visualizations downloaded from Github"
+    return visualizations
+#-------------------------------------------------------------------------------
+
+# Creating Elasticsearch visualizations and dashboards -------------------------
+def push_visualizations(kibana_url, visualizations):
+    for visualization in visualizations:
+        visualization_url = kibana_url+"/api/saved_objects/"+visualization["_type"]+"/"+visualization["_id"]+"?overwrite=true"
+        headers = {'Content-type': 'application/json', 'kbn-xsrf': 'true'}
+        visualization_object = dict()
+        visualization_object["attributes"] = visualization["_source"]
+        call = requests.post(visualization_url, data=json.dumps(visualization_object), headers=headers)
+        if call.status_code == 200 :
+            print "         pushing "+str(visualization["_type"])+" "+visualization["_source"]["title"]
+        else:
+            raise Exception('Failed to push the Elasticsearch visualization \n  '+str(visualization_url)+" "+str(visualization["_source"]["title"])+"\n "+ call.text)
+#-------------------------------------------------------------------------------
+
+# Inflate ----------------------------------------------------------------------
+def inflate(args):
     input_file = args.csv_input_file
-    elastic_index_url = args.elastic_index_url
+    elastic_url = args.elastic_url
     try:
         print "Reading CSV file..."
         csv_rows = read_csv_file(input_file)
         print "Generating json bulk datas..."
         json_bulk = generate_json_bulk(csv_rows)
         print "Elasticsearch insertion..."
-        post_bulk(elastic_index_url, json_bulk)
+        post_bulk(elastic_url, json_bulk)
     except Exception as e:
          print 'An error occured '+str(e)
 #-------------------------------------------------------------------------------
@@ -56,11 +133,11 @@ def generate_json_bulk(csv_rows):
 #-------------------------------------------------------------------------------
 
 # POST the Json bulk to Elasticsearch ------------------------------------------
-def post_bulk(elastic_index_url, json_bulk):
-    elastic_index_url += "/applemusic/_bulk"
+def post_bulk(elastic_url, json_bulk):
+    index_date = datetime.datetime.now().strftime("%Y-%m-%d")
+    elastic_index_url = elastic_url+"/applemusic-"+str(index_date)+"/applemusic/_bulk"
     headers = {'Content-type': 'application/json'}
     chuck_size = 5000
-    print " "+elastic_index_url
     bulk_lines = json_bulk.split('\n')
     index = 0
     bulked = 0
@@ -72,13 +149,13 @@ def post_bulk(elastic_index_url, json_bulk):
             index +=1
         if index == chuck_size:
             bulked += chuck_size
-            print "insertion "+str(bulked)+"/"+str(docs)+" events..."
+            print "\t\tinsertion "+str(bulked)+"/"+str(docs)+" events..."
             bulk_exec(elastic_index_url, bulk, headers)
             bulk = ''
             index = 0
     if index < chuck_size and index > 0:
         bulked += index
-        print "insertion "+str(bulked)+"/"+str(docs)+" events..."
+        print "\t\tinsertion "+str(bulked)+"/"+str(docs)+" events..."
         bulk_exec(elastic_index_url, bulk, headers)
 #-------------------------------------------------------------------------------
 
@@ -93,4 +170,4 @@ def bulk_exec(elastic_index_url, bulk, headers):
 
 if __name__ == "__main__":
     args = handle_args()
-    main(args)
+    args.func(args)
