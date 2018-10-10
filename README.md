@@ -73,8 +73,8 @@ Elasticsearch & kibana Setup...
   ![AppleMusic Kibana](https://blog.cypressxt.net/wp-content/uploads/2018/10/AppleMusicKibana.jpg)
 
 ### Visualizations
-  Visualizations are created during the [`setup`](###Setup).
+  Visualizations are created during the [`setup`](#setup).
   ![AppleMusic Visualization](https://blog.cypressxt.net/wp-content/uploads/2018/10/song_over_time.png)
 ### Dashboards
-  The dashboard is created during the [`setup`](###Setup).
+  The dashboard is created during the [`setup`](#setup).
   ![AppleMusic Dashboard](https://blog.cypressxt.net/wp-content/uploads/2018/10/appleMusic_dashboard.png)
