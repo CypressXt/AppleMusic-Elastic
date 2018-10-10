@@ -134,7 +134,7 @@ def generate_json_bulk(csv_rows):
 
 # POST the Json bulk to Elasticsearch ------------------------------------------
 def post_bulk(elastic_url, json_bulk):
-    index_date = datetime.datetime.now().strftime("%Y-%m-%d")
+    index_date = datetime.datetime.now().strftime("%Y.%m.%d")
     elastic_index_url = elastic_url+"/applemusic-"+str(index_date)+"/applemusic/_bulk"
     headers = {'Content-type': 'application/json'}
     chuck_size = 5000
