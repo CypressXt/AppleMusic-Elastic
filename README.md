@@ -29,10 +29,10 @@
 
   You can do it so by using the `setup` command:
   ```
-./applemusic_to_es.py setup -e http://es:9200 -k http://es:5601
+./applemusic_to_es.py setup -e http://es-server:9200 -k http://kibana-server:5601
 Elasticsearch & kibana Setup...
- Elasticsearch http://es:9200
- Kibana http://es:9200
+ Elasticsearch http://es-server:9200
+ Kibana http://kibana-server:5601
      template downloaded from Github
          template applied
      visualizations downloaded from Github
@@ -53,11 +53,10 @@ Elasticsearch & kibana Setup...
 
   Once you've the `Apple Music Play Activity.csv` file, use the `applemusic_to_es.py` script like this to fill the `applemusic-*` index:
   ```
-  ./applemusic_to_es.py inflate -i /myfolder/Apple\ Music\ Play\ Activity\ 29-01-2018.csv -e http://es:9200
+  ./applemusic_to_es.py inflate -i /myfolder/Apple\ Music\ Play\ Activity\ 29-01-2018.csv -e http://es-server:9200
   Reading CSV file...
   Generating json bulk datas...
   Elasticsearch insertion...
-   http://es:9200/applemusic-2018-10-10/applemusic/_bulk
   		insertion 5000/109042 events...
   		insertion 10000/109042 events...
   		insertion 15000/109042 events...
