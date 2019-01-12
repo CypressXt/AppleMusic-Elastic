@@ -36,7 +36,7 @@ Elasticsearch & kibana Setup...
      template downloaded from Github
          template applied
      visualizations downloaded from Github
-         pushing dashboard Overview [AppleMusic]
+         pushing dashboard [AppleMusic] Overview
          pushing index-pattern applemusic-*
          pushing visualization [AppleMusic] Skipped pie
          pushing visualization [AppleMusic] Single songs played
