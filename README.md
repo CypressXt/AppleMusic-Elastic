@@ -38,15 +38,15 @@ Elasticsearch & kibana Setup...
      visualizations downloaded from Github
          pushing dashboard Overview [AppleMusic]
          pushing index-pattern applemusic-*
-         pushing visualization Skipped pie [AppleMusic]
-         pushing visualization single songs played [AppleMusic]
-         pushing visualization Feature pie [AppleMusic]
-         pushing visualization song listened over time [AppleMusic]
-         pushing visualization Top 10 songs [AppleMusic]
-         pushing visualization Top 10 artists [AppleMusic]
-         pushing visualization Listened hours [AppleMusic]
-         pushing visualization Avg song played / day [AppleMusic]
-         pushing visualization avg listening hours / day [AppleMusic]
+         pushing visualization [AppleMusic] Skipped pie
+         pushing visualization [AppleMusic] Single songs played
+         pushing visualization [AppleMusic] Feature pie
+         pushing visualization [AppleMusic] Song listened over time
+         pushing visualization [AppleMusic] Top 10 songs
+         pushing visualization [AppleMusic] Top 10 artists
+         pushing visualization [AppleMusic] Listened hours
+         pushing visualization [AppleMusic] Avg song played / day
+         pushing visualization [AppleMusic] avg listening hours / day
   ```
 
 ### Inflate
