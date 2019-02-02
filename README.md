@@ -3,6 +3,8 @@
 ## Description
   This project purpose is to import AppleMusic logged activity into Elasticsearch.
 
+  [Check the demo here](http://bit.ly/2WBvi2O)
+
 ## Getting the AppleMusic datas
 
   Ask Apple for your AppleMusic GDPR datas [here](https://privacy.apple.com/)
