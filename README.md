@@ -48,6 +48,10 @@ Elasticsearch & kibana Setup...
          pushing visualization [AppleMusic] Avg song played / day
          pushing visualization [AppleMusic] avg listening hours / day
   ```
+  If your elasticsearch or kibana endpoint is using HTTP basic auth, use the `-x username` option. You will be resqueted to type your basic auth password.
+  ```
+  ./applemusic_to_es.py setup -e http://es-server:9200 -k http://kibana-server:5601 -x username
+  ```
 
 ### Inflate
 
@@ -65,7 +69,10 @@ Elasticsearch & kibana Setup...
   		insertion 105000/109042 events...
   		insertion 109043/109042 events...
   ```
-
+  If your elasticsearch endpoint is using HTTP basic auth, use the `-x username` option. You will be resqueted to type your basic auth password.
+  ```
+  ./applemusic_to_es.py inflate -i /myfolder/Apple\ Music\ Play\ Activity\ 29-01-2018.csv -e http://es-server:9200 -x username
+  ```
 
 ## Elasticsearch
   After the `applemusic_to_es.py` script excecution you will be able to browse your AppleMusic play activity in Kibana. Should look like this:
