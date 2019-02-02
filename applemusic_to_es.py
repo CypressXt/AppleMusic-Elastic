@@ -4,7 +4,7 @@
 # Author: Clement 'CypressXt' Hampai
 # Github: https://github.com/CypressXt/AppleMusic-Elastic
 
-import argparse, csv, json, requests, datetime
+import argparse, csv, json, requests, datetime, getpass
 
 
 # Args management --------------------------------------------------------------
@@ -15,10 +15,12 @@ def handle_args():
     setup_parser.set_defaults(func=setup)
     setup_parser.add_argument('-e', '--elastic-url', help='Elasticsearch server url',required=True)
     setup_parser.add_argument('-k', '--kibana-url', help='Kibana server url',required=True)
+    setup_parser.add_argument('-x', '--basic-auth-username', help='HTTP basic auth username',required=False)
     inflate_parser = commands.add_parser('inflate')
     inflate_parser.set_defaults(func=inflate)
     inflate_parser.add_argument('-i', '--csv-input-file', help='AppleMusic GDPR export file usually "Apple Music Play Activity.csv"',required=True)
     inflate_parser.add_argument('-e', '--elastic-url', help='Elasticsearch server url',required=True)
+    inflate_parser.add_argument('-x', '--basic-auth-username', help='HTTP basic auth username',required=False)
     args = parser.parse_args()
     return args
 #-------------------------------------------------------------------------------
@@ -27,14 +29,19 @@ def handle_args():
 def setup(args):
     elastic_url = args.elastic_url
     kibana_url = args.kibana_url
+    auth_username = args.basic_auth_username
+    auth = ""
+    if auth_username:
+        auth_passwd = getpass.getpass("HTTP basic auth password: ")
+        auth=(auth_username, auth_passwd)
     try:
         print "Elasticsearch & kibana Setup..."
         print " Elasticsearch "+str(elastic_url)
-        print " Kibana "+str(elastic_url)
+        print " Kibana "+str(kibana_url)
         template = get_template()
-        template_result = set_template(elastic_url, template)
+        template_result = set_template(elastic_url, template, auth)
         visualizations = get_visualizations()
-        push_visualizations(kibana_url, visualizations)
+        push_visualizations(kibana_url, visualizations, auth)
     except Exception as e:
         print str(e)
 #-------------------------------------------------------------------------------
@@ -53,10 +60,14 @@ def get_template():
 #-------------------------------------------------------------------------------
 
 # Set Elasticsearch template ----------------------------------------------------
-def set_template(elastic_url, template):
+def set_template(elastic_url, template, auth):
     template_url = elastic_url+"/_template/applemusic"
     headers = {'Content-type': 'application/json'}
-    call = requests.put(template_url, data=json.dumps(template), headers=headers)
+    call = ""
+    if auth:
+        call = requests.put(template_url, data=json.dumps(template), headers=headers, auth=auth)
+    else:
+        call = requests.put(template_url, data=json.dumps(template), headers=headers)
     result = False
     if call.status_code == 200 and call.text == '{"acknowledged":true}':
         result = True
@@ -80,13 +91,17 @@ def get_visualizations():
 #-------------------------------------------------------------------------------
 
 # Creating Elasticsearch visualizations and dashboards -------------------------
-def push_visualizations(kibana_url, visualizations):
+def push_visualizations(kibana_url, visualizations, auth):
     for visualization in visualizations:
         visualization_url = kibana_url+"/api/saved_objects/"+visualization["_type"]+"/"+visualization["_id"]+"?overwrite=true"
         headers = {'Content-type': 'application/json', 'kbn-xsrf': 'true'}
         visualization_object = dict()
         visualization_object["attributes"] = visualization["_source"]
-        call = requests.post(visualization_url, data=json.dumps(visualization_object), headers=headers)
+        call = ""
+        if auth:
+            call = requests.post(visualization_url, data=json.dumps(visualization_object), headers=headers, auth=auth)
+        else:
+            call = requests.post(visualization_url, data=json.dumps(visualization_object), headers=headers)
         if call.status_code == 200 :
             print "         pushing "+str(visualization["_type"])+" "+visualization["_source"]["title"]
         else:
@@ -97,13 +112,18 @@ def push_visualizations(kibana_url, visualizations):
 def inflate(args):
     input_file = args.csv_input_file
     elastic_url = args.elastic_url
+    auth_username = args.basic_auth_username
+    auth = ""
+    if auth_username:
+        auth_passwd = getpass.getpass("HTTP basic auth password: ")
+        auth=(auth_username, auth_passwd)
     try:
         print "Reading CSV file..."
         csv_rows = read_csv_file(input_file)
         print "Generating json bulk datas..."
         json_bulk = generate_json_bulk(csv_rows)
         print "Elasticsearch insertion..."
-        post_bulk(elastic_url, json_bulk)
+        post_bulk(elastic_url, json_bulk, auth)
     except Exception as e:
          print 'An error occured '+str(e)
 #-------------------------------------------------------------------------------
@@ -133,7 +153,7 @@ def generate_json_bulk(csv_rows):
 #-------------------------------------------------------------------------------
 
 # POST the Json bulk to Elasticsearch ------------------------------------------
-def post_bulk(elastic_url, json_bulk):
+def post_bulk(elastic_url, json_bulk, auth):
     index_date = datetime.datetime.now().strftime("%Y.%m.%d")
     elastic_index_url = elastic_url+"/applemusic-"+str(index_date)+"/applemusic/_bulk"
     headers = {'Content-type': 'application/json'}
@@ -150,18 +170,22 @@ def post_bulk(elastic_url, json_bulk):
         if index == chuck_size:
             bulked += chuck_size
             print "\t\tinsertion "+str(bulked)+"/"+str(docs)+" events..."
-            bulk_exec(elastic_index_url, bulk, headers)
+            bulk_exec(elastic_index_url, bulk, headers, auth)
             bulk = ''
             index = 0
     if index < chuck_size and index > 0:
         bulked += index
         print "\t\tinsertion "+str(bulked)+"/"+str(docs)+" events..."
-        bulk_exec(elastic_index_url, bulk, headers)
+        bulk_exec(elastic_index_url, bulk, headers, auth)
 #-------------------------------------------------------------------------------
 
 # Elasticsearch bulk exec ------------------------------------------------------
-def bulk_exec(elastic_index_url, bulk, headers):
-    bulk_query = requests.post(elastic_index_url, data=bulk, headers=headers)
+def bulk_exec(elastic_index_url, bulk, headers, auth):
+    bulk_query = ""
+    if auth:
+        bulk_query = requests.post(elastic_index_url, data=bulk, headers=headers, auth=auth)
+    else:
+        bulk_query = requests.post(elastic_index_url, data=bulk, headers=headers)
     if bulk_query.status_code != 200:
         print(bulk_query.status_code, bulk_query.reason)
         print bulk
