@@ -3,7 +3,7 @@
 ## Description
   This project purpose is to import AppleMusic logged activity into Elasticsearch.
 
-  [Check the demo here](http://bit.ly/2WBvi2O)
+  [Check the demo here](http://bit.ly/3bj6wfg)
 
 ## Getting the AppleMusic datas
 
