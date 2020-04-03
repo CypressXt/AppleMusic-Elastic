@@ -1,69 +1,22 @@
 [
   {
-    "_id": "05b1f080-bc3b-11e8-8234-67d0c65ecec6",
-    "_type": "dashboard",
-    "_source": {
-      "title": "[AppleMusic] Overview",
-      "hits": 0,
-      "description": "",
-      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":18,\"y\":25,\"w\":30,\"h\":7,\"i\":\"1\"},\"id\":\"c6ccdd80-bc3a-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":30,\"y\":11,\"w\":18,\"h\":7,\"i\":\"2\"},\"id\":\"c07c8170-bc2f-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"Listened\":\"#629E51\",\"Skipped\":\"#E5AC0E\"},\"legendOpen\":false}},\"gridData\":{\"x\":37,\"y\":18,\"w\":11,\"h\":7,\"i\":\"3\"},\"id\":\"3e14dd80-bc3a-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":11,\"i\":\"4\"},\"id\":\"180bf2a0-bc4d-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":11,\"w\":8,\"h\":21,\"i\":\"6\"},\"id\":\"5cb70790-bc4e-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":8,\"y\":11,\"w\":10,\"h\":21,\"i\":\"7\"},\"id\":\"fde8db80-bc4d-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":18,\"y\":18,\"w\":10,\"h\":7,\"i\":\"8\"},\"id\":\"bd213af0-bc4f-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":28,\"y\":18,\"w\":9,\"h\":7,\"i\":\"10\"},\"id\":\"6bf74460-bc51-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"gridData\":{\"x\":18,\"y\":11,\"w\":12,\"h\":7,\"i\":\"11\"},\"version\":\"6.4.2\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"id\":\"045000d0-cb34-11e8-9fce-79c15467b2cd\",\"embeddableConfig\":{}}]",
-      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
-      "version": 1,
-      "timeRestore": false,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
-      }
-    }
-  },
-  {
-    "_id": "f82f0560-cb30-11e8-9fce-79c15467b2cd",
-    "_type": "index-pattern",
-    "_source": {
-      "title": "applemusic-*",
-      "timeFieldName": "event_received_timestamp",
-      "fields": "[{\"name\":\"Apple Id Number\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"Apple Id Number.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Offline\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"apple_id_number\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"apple_id_number.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"apple_music_subscription\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"apple_music_subscription.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"artist_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"artist_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"build_version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"build_version.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"client_ip_address\",\"type\":\"ip\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"container_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"container_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"device_identifier\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"device_identifier.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"end_position_in_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"end_reason_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"end_reason_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_end_timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_reason_hint_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"event_reason_hint_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_received_timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_start_timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"event_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"feature_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"feature_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"item_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"item_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"media_duration_in_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"media_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"media_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metrics_bucket_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"metrics_bucket_id.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metrics_client_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"metrics_client_id.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"milliseconds_since_play\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"offline\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"offline.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"play_duration_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"song_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"song_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"source_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"source_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"start_position_in_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"store_country_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"store_country_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"utc_offset_in_seconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
-    }
-  },
-  {
-    "_id": "3e14dd80-bc3a-11e8-8234-67d0c65ecec6",
+    "_id": "bd213af0-bc4f-11e8-8234-67d0c65ecec6",
     "_type": "visualization",
     "_source": {
-      "title": "[AppleMusic] Skipped pie",
-      "visState": "{\n  \"title\": \"[AppleMusic] Skipped pie\",\n  \"type\": \"pie\",\n  \"params\": {\n    \"type\": \"pie\",\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"legendPosition\": \"right\",\n    \"isDonut\": true,\n    \"labels\": {\n      \"show\": true,\n      \"values\": true,\n      \"last_level\": true,\n      \"truncate\": 100\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"filters\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"filters\": [\n          {\n            \"input\": {\n              \"query\": \"end_reason_type:TRACK_SKIPPED_*\"\n            },\n            \"label\": \"Skipped\"\n          },\n          {\n            \"input\": {\n              \"query\": \"end_reason_type: NATURAL_END_OF_TRACK\"\n            },\n            \"label\": \"Listened\"\n          }\n        ]\n      }\n    }\n  ]\n}",
-      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"Listened\": \"#629E51\",\n      \"Skipped\": \"#E5AC0E\"\n    }\n  }\n}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
-      }
-    }
-  },
-  {
-    "_id": "6bf74460-bc51-11e8-8234-67d0c65ecec6",
-    "_type": "visualization",
-    "_source": {
-      "title": "[AppleMusic] Single songs played",
-      "visState": "{\n  \"title\": \"[AppleMusic] Single songs played\",\n  \"type\": \"metric\",\n  \"params\": {\n    \"addTooltip\": true,\n    \"addLegend\": false,\n    \"type\": \"metric\",\n    \"metric\": {\n      \"percentageMode\": false,\n      \"useRanges\": false,\n      \"colorSchema\": \"Green to Red\",\n      \"metricColorMode\": \"None\",\n      \"colorsRange\": [\n        {\n          \"from\": 0,\n          \"to\": 10000\n        }\n      ],\n      \"labels\": {\n        \"show\": true\n      },\n      \"invertColors\": false,\n      \"style\": {\n        \"bgFill\": \"#000\",\n        \"bgColor\": false,\n        \"labelColor\": false,\n        \"subText\": \"\",\n        \"fontSize\": 60\n      }\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"cardinality\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"song_name.keyword\",\n        \"customLabel\": \"single song played\"\n      }\n    }\n  ]\n}",
+      "title": "[AppleMusic] Avg song played / day",
+      "visState": "{\n  \"aggs\": [\n    {\n      \"enabled\": true,\n      \"id\": \"1\",\n      \"params\": {\n        \"customBucket\": {\n          \"enabled\": true,\n          \"id\": \"1-bucket\",\n          \"params\": {\n            \"customInterval\": \"2h\",\n            \"extended_bounds\": {},\n            \"field\": \"event_end_timestamp\",\n            \"interval\": \"d\",\n            \"min_doc_count\": 1\n          },\n          \"schema\": {\n            \"aggFilter\": [],\n            \"deprecate\": false,\n            \"editor\": false,\n            \"group\": \"none\",\n            \"max\": null,\n            \"min\": 0,\n            \"name\": \"bucketAgg\",\n            \"params\": [],\n            \"title\": \"Bucket Agg\"\n          },\n          \"type\": \"date_histogram\"\n        },\n        \"customLabel\": \"avg song played / day\",\n        \"customMetric\": {\n          \"enabled\": true,\n          \"id\": \"1-metric\",\n          \"params\": {},\n          \"schema\": {\n            \"aggFilter\": [\n              \"!top_hits\",\n              \"!percentiles\",\n              \"!percentile_ranks\",\n              \"!median\",\n              \"!std_dev\",\n              \"!sum_bucket\",\n              \"!avg_bucket\",\n              \"!min_bucket\",\n              \"!max_bucket\",\n              \"!derivative\",\n              \"!moving_avg\",\n              \"!serial_diff\",\n              \"!cumulative_sum\"\n            ],\n            \"deprecate\": false,\n            \"editor\": false,\n            \"group\": \"none\",\n            \"max\": null,\n            \"min\": 0,\n            \"name\": \"metricAgg\",\n            \"params\": [],\n            \"title\": \"Metric Agg\"\n          },\n          \"type\": \"count\"\n        }\n      },\n      \"schema\": \"metric\",\n      \"type\": \"avg_bucket\"\n    }\n  ],\n  \"params\": {\n    \"addLegend\": false,\n    \"addTooltip\": true,\n    \"metric\": {\n      \"colorSchema\": \"Green to Red\",\n      \"colorsRange\": [\n        {\n          \"from\": 0,\n          \"to\": 10000\n        }\n      ],\n      \"invertColors\": false,\n      \"labels\": {\n        \"show\": true\n      },\n      \"metricColorMode\": \"None\",\n      \"percentageMode\": false,\n      \"style\": {\n        \"bgColor\": false,\n        \"bgFill\": \"#000\",\n        \"fontSize\": 60,\n        \"labelColor\": false,\n        \"subText\": \"\"\n      },\n      \"useRanges\": false\n    },\n    \"type\": \"metric\"\n  },\n  \"title\": \"Avg song played / day [AppleMusic]\",\n  \"type\": \"metric\"\n}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
+        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"play_duration_milliseconds:>10000\",\n    \"language\": \"lucene\"\n  }\n}"
       }
-    }
-  },
-  {
-    "_id": "c6ccdd80-bc3a-11e8-8234-67d0c65ecec6",
-    "_type": "visualization",
-    "_source": {
-      "title": "[AppleMusic] Feature pie",
-      "visState": "{\n  \"title\": \"[AppleMusic] Feature pie\",\n  \"type\": \"pie\",\n  \"params\": {\n    \"type\": \"pie\",\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"legendPosition\": \"right\",\n    \"isDonut\": true,\n    \"labels\": {\n      \"show\": true,\n      \"values\": true,\n      \"last_level\": true,\n      \"truncate\": 100\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"field\": \"feature_name.keyword\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\",\n        \"size\": 5,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\"\n      }\n    }\n  ]\n}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
-      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
     }
   },
   {
@@ -78,34 +31,12 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"play_duration_milliseconds:>10000\"}}"
       }
-    }
-  },
-  {
-    "_id": "fde8db80-bc4d-11e8-8234-67d0c65ecec6",
-    "_type": "visualization",
-    "_source": {
-      "title": "[AppleMusic] Top 10 songs",
-      "visState": "{\n  \"title\": \"[AppleMusic] Top 10 songs\",\n  \"type\": \"table\",\n  \"params\": {\n    \"perPage\": 10,\n    \"showPartialRows\": false,\n    \"showMeticsAtAllLevels\": false,\n    \"sort\": {\n      \"columnIndex\": null,\n      \"direction\": null\n    },\n    \"showTotal\": false,\n    \"totalFunc\": \"sum\"\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"customLabel\": \"Played\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"bucket\",\n      \"params\": {\n        \"field\": \"song_name.keyword\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\",\n        \"size\": 10,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\",\n        \"customLabel\": \"Song\"\n      }\n    },\n    {\n      \"id\": \"3\",\n      \"enabled\": false,\n      \"type\": \"terms\",\n      \"schema\": \"bucket\",\n      \"params\": {\n        \"field\": \"artist_name.keyword\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\",\n        \"size\": 10,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\",\n        \"customLabel\": \"Artiste\"\n      }\n    }\n  ]\n}",
-      "uiStateJSON": "{\n  \"vis\": {\n    \"params\": {\n      \"sort\": {\n        \"columnIndex\": null,\n        \"direction\": null\n      }\n    }\n  }\n}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
-      }
-    }
-  },
-  {
-    "_id": "5cb70790-bc4e-11e8-8234-67d0c65ecec6",
-    "_type": "visualization",
-    "_source": {
-      "title": "[AppleMusic] Top 10 artists",
-      "visState": "{\n  \"title\": \"[AppleMusic] Top 10 artists\",\n  \"type\": \"table\",\n  \"params\": {\n    \"perPage\": 10,\n    \"showPartialRows\": false,\n    \"showMeticsAtAllLevels\": false,\n    \"sort\": {\n      \"columnIndex\": null,\n      \"direction\": null\n    },\n    \"showTotal\": false,\n    \"totalFunc\": \"sum\"\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"customLabel\": \"Played\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"bucket\",\n      \"params\": {\n        \"field\": \"artist_name.keyword\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\",\n        \"size\": 10,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\",\n        \"customLabel\": \"Artist\"\n      }\n    }\n  ]\n}",
-      "uiStateJSON": "{\n  \"vis\": {\n    \"params\": {\n      \"sort\": {\n        \"columnIndex\": null,\n        \"direction\": null\n      }\n    }\n  }\n}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
-      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
     }
   },
   {
@@ -120,20 +51,92 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
     }
   },
   {
-    "_id": "bd213af0-bc4f-11e8-8234-67d0c65ecec6",
+    "_id": "3e14dd80-bc3a-11e8-8234-67d0c65ecec6",
     "_type": "visualization",
     "_source": {
-      "title": "[AppleMusic] Avg song played / day",
-      "visState": "{\n  \"aggs\": [\n    {\n      \"enabled\": true,\n      \"id\": \"1\",\n      \"params\": {\n        \"customBucket\": {\n          \"enabled\": true,\n          \"id\": \"1-bucket\",\n          \"params\": {\n            \"customInterval\": \"2h\",\n            \"extended_bounds\": {},\n            \"field\": \"event_end_timestamp\",\n            \"interval\": \"d\",\n            \"min_doc_count\": 1\n          },\n          \"schema\": {\n            \"aggFilter\": [],\n            \"deprecate\": false,\n            \"editor\": false,\n            \"group\": \"none\",\n            \"max\": null,\n            \"min\": 0,\n            \"name\": \"bucketAgg\",\n            \"params\": [],\n            \"title\": \"Bucket Agg\"\n          },\n          \"type\": \"date_histogram\"\n        },\n        \"customLabel\": \"avg song played / day\",\n        \"customMetric\": {\n          \"enabled\": true,\n          \"id\": \"1-metric\",\n          \"params\": {},\n          \"schema\": {\n            \"aggFilter\": [\n              \"!top_hits\",\n              \"!percentiles\",\n              \"!percentile_ranks\",\n              \"!median\",\n              \"!std_dev\",\n              \"!sum_bucket\",\n              \"!avg_bucket\",\n              \"!min_bucket\",\n              \"!max_bucket\",\n              \"!derivative\",\n              \"!moving_avg\",\n              \"!serial_diff\",\n              \"!cumulative_sum\"\n            ],\n            \"deprecate\": false,\n            \"editor\": false,\n            \"group\": \"none\",\n            \"max\": null,\n            \"min\": 0,\n            \"name\": \"metricAgg\",\n            \"params\": [],\n            \"title\": \"Metric Agg\"\n          },\n          \"type\": \"count\"\n        }\n      },\n      \"schema\": \"metric\",\n      \"type\": \"avg_bucket\"\n    }\n  ],\n  \"params\": {\n    \"addLegend\": false,\n    \"addTooltip\": true,\n    \"metric\": {\n      \"colorSchema\": \"Green to Red\",\n      \"colorsRange\": [\n        {\n          \"from\": 0,\n          \"to\": 10000\n        }\n      ],\n      \"invertColors\": false,\n      \"labels\": {\n        \"show\": true\n      },\n      \"metricColorMode\": \"None\",\n      \"percentageMode\": false,\n      \"style\": {\n        \"bgColor\": false,\n        \"bgFill\": \"#000\",\n        \"fontSize\": 60,\n        \"labelColor\": false,\n        \"subText\": \"\"\n      },\n      \"useRanges\": false\n    },\n    \"type\": \"metric\"\n  },\n  \"title\": \"Avg song played / day [AppleMusic]\",\n  \"type\": \"metric\"\n}",
+      "title": "[AppleMusic] Skipped pie",
+      "visState": "{\n  \"title\": \"[AppleMusic] Skipped pie\",\n  \"type\": \"pie\",\n  \"params\": {\n    \"type\": \"pie\",\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"legendPosition\": \"right\",\n    \"isDonut\": true,\n    \"labels\": {\n      \"show\": true,\n      \"values\": true,\n      \"last_level\": true,\n      \"truncate\": 100\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"filters\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"filters\": [\n          {\n            \"input\": {\n              \"query\": \"end_reason_type:TRACK_SKIPPED_*\"\n            },\n            \"label\": \"Skipped\"\n          },\n          {\n            \"input\": {\n              \"query\": \"end_reason_type: NATURAL_END_OF_TRACK\"\n            },\n            \"label\": \"Listened\"\n          }\n        ]\n      }\n    }\n  ]\n}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"Listened\": \"#629E51\",\n      \"Skipped\": \"#E5AC0E\"\n    }\n  }\n}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "6bf74460-bc51-11e8-8234-67d0c65ecec6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] Single songs played",
+      "visState": "{\n  \"title\": \"[AppleMusic] Single songs played\",\n  \"type\": \"metric\",\n  \"params\": {\n    \"addTooltip\": true,\n    \"addLegend\": false,\n    \"type\": \"metric\",\n    \"metric\": {\n      \"percentageMode\": false,\n      \"useRanges\": false,\n      \"colorSchema\": \"Green to Red\",\n      \"metricColorMode\": \"None\",\n      \"colorsRange\": [\n        {\n          \"from\": 0,\n          \"to\": 10000\n        }\n      ],\n      \"labels\": {\n        \"show\": true\n      },\n      \"invertColors\": false,\n      \"style\": {\n        \"bgFill\": \"#000\",\n        \"bgColor\": false,\n        \"labelColor\": false,\n        \"subText\": \"\",\n        \"fontSize\": 60\n      }\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"cardinality\",\n      \"schema\": \"metric\",\n      \"params\": {\n        \"field\": \"song_name.keyword\",\n        \"customLabel\": \"single song played\"\n      }\n    }\n  ]\n}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"play_duration_milliseconds:>10000\",\n    \"language\": \"lucene\"\n  }\n}"
+        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "c6ccdd80-bc3a-11e8-8234-67d0c65ecec6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] Feature pie",
+      "visState": "{\n  \"title\": \"[AppleMusic] Feature pie\",\n  \"type\": \"pie\",\n  \"params\": {\n    \"type\": \"pie\",\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"legendPosition\": \"right\",\n    \"isDonut\": true,\n    \"labels\": {\n      \"show\": true,\n      \"values\": true,\n      \"last_level\": true,\n      \"truncate\": 100\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"field\": \"feature_name.keyword\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\",\n        \"size\": 5,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\"\n      }\n    }\n  ]\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\n  \"filter\": [],\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  }\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "211d8310-75a4-11ea-8fae-9bc70c3ad1a2",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] Listened hours by hour of day",
+      "visState": "{\"title\":\"[AppleMusic] Listened hours by hour of day\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":true,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":10,\"colorSchema\":\"Blues\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":true,\"rotate\":0,\"overwriteColor\":false,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"play_duration_milliseconds\",\"json\":\"{\\n  \\\"script\\\": {\\n    \\\"inline\\\": \\\"doc['play_duration_milliseconds'].value / 1000.0 /3600.0\\\",\\n    \\\"lang\\\": \\\"painless\\\"\\n  }\\n}\",\"customLabel\":\"Listened during [h]\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"day_of_week\",\"size\":7,\"order\":\"asc\",\"orderBy\":\"_key\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Day of the week\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"hour_of_day\",\"size\":24,\"order\":\"asc\",\"orderBy\":\"_key\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Hour of the day\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 9\":\"rgb(247,251,255)\",\"9 - 18\":\"rgb(227,238,249)\",\"18 - 27\":\"rgb(208,225,242)\",\"27 - 36\":\"rgb(182,212,233)\",\"36 - 45\":\"rgb(148,196,223)\",\"45 - 54\":\"rgb(107,174,214)\",\"54 - 63\":\"rgb(74,152,201)\",\"63 - 72\":\"rgb(46,126,188)\",\"72 - 81\":\"rgb(23,100,171)\",\"81 - 90\":\"rgb(8,74,145)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"negate\":false,\"disabled\":false,\"alias\":\"Play end\",\"type\":\"phrase\",\"key\":\"event_type.keyword\",\"value\":\"PLAY_END\",\"params\":{\"query\":\"PLAY_END\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"event_type.keyword\":{\"query\":\"PLAY_END\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"query\":{\"bool\":{\"minimum_should_match\":1,\"should\":[{\"match_phrase\":{\"end_reason_type.keyword\":\"NATURAL_END_OF_TRACK\"}},{\"match_phrase\":{\"end_reason_type.keyword\":\"PLAYBACK_MANUALLY_PAUSED\"}},{\"match_phrase\":{\"end_reason_type.keyword\":\"TRACK_SKIPPED_FORWARDS\"}},{\"match_phrase\":{\"end_reason_type.keyword\":\"MANUALLY_SELECTED_PLAYBACK_OF_A_DIFF_ITEM\"}},{\"match_phrase\":{\"end_reason_type.keyword\":\"TRACK_SKIPPED_BACKWARDS\"}}]}},\"meta\":{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"disabled\":false,\"alias\":\"Valid end reason\",\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"bool\\\":{\\\"minimum_should_match\\\":1,\\\"should\\\":[{\\\"match_phrase\\\":{\\\"end_reason_type.keyword\\\":\\\"NATURAL_END_OF_TRACK\\\"}},{\\\"match_phrase\\\":{\\\"end_reason_type.keyword\\\":\\\"PLAYBACK_MANUALLY_PAUSED\\\"}},{\\\"match_phrase\\\":{\\\"end_reason_type.keyword\\\":\\\"TRACK_SKIPPED_FORWARDS\\\"}},{\\\"match_phrase\\\":{\\\"end_reason_type.keyword\\\":\\\"MANUALLY_SELECTED_PLAYBACK_OF_A_DIFF_ITEM\\\"}},{\\\"match_phrase\\\":{\\\"end_reason_type.keyword\\\":\\\"TRACK_SKIPPED_BACKWARDS\\\"}}]}}\",\"negate\":false},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
     }
   },
   {
@@ -148,6 +151,121 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "fde8db80-bc4d-11e8-8234-67d0c65ecec6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] Top 20 songs",
+      "visState": "{\"title\":\"[AppleMusic] Top 20 songs\",\"type\":\"table\",\"params\":{\"perPage\":20,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Played\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"song_name.keyword\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Song\"}},{\"id\":\"3\",\"enabled\":false,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"artist_name.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Artiste\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "5cb70790-bc4e-11e8-8234-67d0c65ecec6",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] Top 20 artists",
+      "visState": "{\"title\":\"[AppleMusic] Top 20 artists\",\"type\":\"table\",\"params\":{\"perPage\":20,\"showPartialRows\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\",\"showMetricsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Played\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"artist_name.keyword\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"Artist\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "4d2ed7a0-75b4-11ea-8fae-9bc70c3ad1a2",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] last data record",
+      "visState": "{\"title\":\"[AppleMusic] last data record\",\"type\":\"table\",\"params\":{\"perPage\":1,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"event_end_timestamp\",\"customLabel\":\"last record\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "16ce9540-75b1-11ea-8fae-9bc70c3ad1a2",
+    "_type": "visualization",
+    "_source": {
+      "title": "[AppleMusic] Top genre",
+      "visState": "{\"title\":\"[AppleMusic] Top genre\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f82f0560-cb30-11e8-9fce-79c15467b2cd\",\"query\":{\"query\":\"[AppleMusic] Top genre\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    },
+    "_migrationVersion": {
+      "visualization": "6.7.2"
+    }
+  },
+  {
+    "_id": "05b1f080-bc3b-11e8-8234-67d0c65ecec6",
+    "_type": "dashboard",
+    "_source": {
+      "title": "[AppleMusic] Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":18,\"y\":25,\"w\":30,\"h\":7,\"i\":\"1\"},\"id\":\"c6ccdd80-bc3a-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":30,\"y\":11,\"w\":18,\"h\":7,\"i\":\"2\"},\"id\":\"c07c8170-bc2f-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"Listened\":\"#629E51\",\"Skipped\":\"#E5AC0E\"},\"legendOpen\":false}},\"gridData\":{\"x\":37,\"y\":18,\"w\":11,\"h\":7,\"i\":\"3\"},\"id\":\"3e14dd80-bc3a-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":11,\"i\":\"4\"},\"id\":\"180bf2a0-bc4d-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":11,\"w\":8,\"h\":21,\"i\":\"6\"},\"id\":\"5cb70790-bc4e-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":8,\"y\":11,\"w\":10,\"h\":21,\"i\":\"7\"},\"id\":\"fde8db80-bc4d-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":18,\"y\":18,\"w\":10,\"h\":7,\"i\":\"8\"},\"id\":\"bd213af0-bc4f-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":28,\"y\":18,\"w\":9,\"h\":7,\"i\":\"10\"},\"id\":\"6bf74460-bc51-11e8-8234-67d0c65ecec6\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":18,\"y\":11,\"w\":12,\"h\":7,\"i\":\"11\"},\"id\":\"045000d0-cb34-11e8-9fce-79c15467b2cd\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":32,\"w\":32,\"h\":29,\"i\":\"12\"},\"id\":\"211d8310-75a4-11ea-8fae-9bc70c3ad1a2\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.8.7\"},{\"gridData\":{\"x\":32,\"y\":32,\"w\":16,\"h\":6,\"i\":\"13\"},\"version\":\"6.8.7\",\"panelIndex\":\"13\",\"type\":\"visualization\",\"id\":\"4d2ed7a0-75b4-11ea-8fae-9bc70c3ad1a2\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f82f0560-cb30-11e8-9fce-79c15467b2cd",
+    "_type": "index-pattern",
+    "_source": {
+      "title": "applemusic-*",
+      "timeFieldName": "event_received_timestamp",
+      "fields": "[{\"name\":\"Apple Id Number\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"Apple Id Number.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"Offline\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"apple_id_number\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"apple_id_number.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"apple_music_subscription\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"apple_music_subscription.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"artist_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"artist_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"build_version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"build_version.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"client_ip_address\",\"type\":\"ip\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"container_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"container_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"device_identifier\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"device_identifier.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"end_position_in_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"end_reason_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"end_reason_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_end_timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_reason_hint_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"event_reason_hint_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_received_timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_start_timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"event_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"event_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"feature_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"feature_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"item_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"item_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"media_duration_in_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"media_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"media_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metrics_bucket_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"metrics_bucket_id.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"metrics_client_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"metrics_client_id.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"milliseconds_since_play\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"offline\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"offline.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"play_duration_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"song_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"song_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"source_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"source_type.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"start_position_in_milliseconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"store_country_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"store_country_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"utc_offset_in_seconds\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"day_of_week\",\"type\":\"string\",\"count\":0,\"scripted\":true,\"script\":\"if(!doc['event_end_timestamp'].empty){ String[] days = new String[] {\\\"\\\", \\\"1 Mon\\\", \\\"2 Tue\\\", \\\"3 Wed\\\", \\\"4 Thu\\\", \\\"5 Fri\\\", \\\"6 Sat\\\", \\\"7 Sun\\\"}; def nm_day = (int)doc['event_end_timestamp'].value.dayOfWeek; return days[nm_day]; }else{ return null }\\n\",\"lang\":\"painless\",\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"hour_of_day\",\"type\":\"number\",\"count\":0,\"scripted\":true,\"script\":\"if(!doc['event_end_timestamp'].empty){ return doc['event_end_timestamp'].value.hourOfDay }else{ return null }\\n\",\"lang\":\"painless\",\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false}]",
+      "fieldFormatMap": "{\"day_of_week\":{},\"hour_of_day\":{}}"
     }
   }
 ]
