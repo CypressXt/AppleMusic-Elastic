@@ -59,6 +59,15 @@ def handle_args():
         help='HTTP basic auth username',
         required=False
     )
+    inflate_parser.add_argument(
+        '-a',
+        '--anonymize',
+        help='Remove sensible data: '+ \
+            '"client_ip_address", "apple_id_number", "device_identifier", '+
+            '"metrics_client_id", "metrics_bucket_id"',
+        action='store_true',
+        required=False
+    )
     return parser
 # ------------------------------------------------------------------------------
 
@@ -196,12 +205,13 @@ def inflate(args):
     elastic_url = args.elastic_url
     auth_username = args.basic_auth_username
     auth = ""
+    anon = args.anonymize
     if auth_username:
         auth_passwd = getpass.getpass("HTTP basic auth password: ")
         auth = (auth_username, auth_passwd)
     try:
         print("Reading CSV file...")
-        csv_rows = read_csv_file(input_file)
+        csv_rows = read_csv_file(input_file, anon)
         print("Generating json bulk datas...")
         json_bulk = generate_json_bulk(csv_rows)
         print("Elasticsearch insertion...")
@@ -212,24 +222,21 @@ def inflate(args):
 
 
 # Read the Apple Music Play Activity csv file ---------------------------------
-def read_csv_file(file):
+def read_csv_file(file, anon):
     csv_rows = []
     with open(file) as csvfile:
         reader = csv.DictReader(csvfile)
         title = reader.fieldnames
-        # Optimization needed here, working on it...
         for row in reader:
-            for i in range(len(title)):
-                if row[title[i]] == "":
-                    row[title[i]] = None
-            csv_rows.extend(
-                [
-                    {
-                        title[i].lower().replace(' ', '_'):row[title[i]]
-                        for i in range(len(title))
-                    }
-                ]
-            )
+            if anon:
+                row = {k: row[k] for k in row if k.lower().replace(' ', '_') not in [
+                    "client_ip_address", "apple_id_number",
+                    "device_identifier", "metrics_client_id",
+                    "metrics_bucket_id", "apple_music_subscription"
+                ]}
+            else:
+                row = {k: row[k] for k in row}
+            csv_rows.extend([row])
     return csv_rows
 # ------------------------------------------------------------------------------
 
