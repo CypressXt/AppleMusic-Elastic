@@ -1,4 +1,5 @@
 # AppleMusic Elastic
+![AppleMusic Dashboard](https://blog.cypressxt.net/wp-content/uploads/2021/04/Capture-decran-du-2021-04-28-18-59-47.png)
 
 ## Description
   This project purpose is to import AppleMusic logged activity into Elasticsearch.
