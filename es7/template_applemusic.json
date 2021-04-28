@@ -1,195 +1,197 @@
 {
-  "index_patterns": ["applemusic-*"],
-  "mappings":{
-    "applemusic": {
+  "template": {
+    "settings": {},
+    "mappings": {
+      "dynamic_templates": [],
       "properties": {
-        "event_end_timestamp": {
-          "type": "date"
-        },
-        "artist_name": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "item_type": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "end_position_in_milliseconds": {
-          "type": "long"
-        },
-        "client_ip_address": {
-          "type": "ip"
-        },
-        "song_name": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "event_type": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "store_country_name": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "event_reason_hint_type": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "media_type": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "device_identifier": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "apple_music_subscription": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "utc_offset_in_seconds": {
-          "type": "long"
-        },
-        "start_position_in_milliseconds": {
-          "type": "long"
-        },
         "Apple Id Number": {
+          "type": "text",
           "fields": {
             "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "type": "text"
-        },
-        "feature_name": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "build_version": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "media_duration_in_milliseconds": {
-          "type": "long"
-        },
-        "end_reason_type": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
+          }
         },
         "Offline": {
           "type": "boolean"
         },
-        "metrics_bucket_id": {
+        "apple_music_subscription": {
+          "type": "text",
           "fields": {
             "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "type": "text"
+          }
         },
-        "source_type": {
+        "artist_name": {
+          "type": "text",
           "fields": {
             "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "type": "text"
+          }
         },
-        "milliseconds_since_play": {
+        "build_version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "client_ip_address": {
+          "type": "ip"
+        },
+        "container_name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "device_identifier": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "end_position_in_milliseconds": {
           "type": "long"
         },
-        "metrics_client_id": {
+        "end_reason_type": {
+          "type": "text",
           "fields": {
             "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "type": "text"
+          }
+        },
+        "event_end_timestamp": {
+          "type": "date"
+        },
+        "event_reason_hint_type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
         },
         "event_received_timestamp": {
           "type": "date"
         },
-        "container_name": {
+        "event_start_timestamp": {
+          "type": "date"
+        },
+        "event_type": {
+          "type": "text",
           "fields": {
             "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "type": "text"
+          }
+        },
+        "feature_name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "item_type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "media_duration_in_milliseconds": {
+          "type": "long"
+        },
+        "media_type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "metrics_bucket_id": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "metrics_client_id": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "milliseconds_since_play": {
+          "type": "long"
         },
         "play_duration_milliseconds": {
           "type": "long"
         },
-        "event_start_timestamp": {
-          "type": "date"
+        "song_name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "source_type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "start_position_in_milliseconds": {
+          "type": "long"
+        },
+        "store_country_name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "utc_offset_in_seconds": {
+          "type": "long"
         }
       }
-    }
+    },
+    "aliases": {}
   }
 }
